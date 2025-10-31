@@ -1,0 +1,216 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background-color: aquamarine;
+  align-items: center;
+  top: 0;
+  z-index: 1000;
+  position: sticky;
+}
+.logo {
+  text-decoration: none;
+  cursor: default;
+  font-weight: 700;
+  font-size: 30px;
+  color: black;
+  background-color: aquamarine;
+}
+.id {
+  display: flex;
+  gap: 20px;
+  text-decoration: none;
+  color: rgb(7, 7, 56);
+  font-size: 20px;
+  background-color: aquamarine;
+}
+.id a {
+  text-decoration: none;
+  font-weight: 600;
+}
+.id a:hover {
+  text-decoration: underline;
+}
+#hero {
+  height: 100vh;
+  background: url(images/Whisk_e8180cbef2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.hero-section {
+  display: flex;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(8, 8, 54, 0.479);
+  height: 100vh;
+  backdrop-filter: blur(5px);
+}
+.text {
+  width: 500px;
+}
+#hero img {
+  background-color: aquamarine;
+  padding: 30px 30px 50px;
+  border-radius: 15px;
+}
+
+.text h1 {
+  font-size: 50px;
+  color: white;
+}
+.text h1 span {
+  color: aquamarine;
+}
+.text p {
+  line-height: 1.6;
+  color: white;
+}
+button {
+  padding: 5px 10px;
+  background-color: aquamarine;
+  font-weight: 700;
+  margin-top: 10px;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  header {
+    padding: 20px;
+  }
+  .logo{
+    font-size: 25px;
+  }
+  .hero-section {
+    display: block;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  }
+  #hero img {
+    width: 70%;
+    height: auto;
+    margin-bottom: 20px;
+    align-items: center;
+    margin: 50px;
+    padding: 20px 20px 30px;
+  }
+  .text {
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+  }
+  .text h1 {
+    font-size: 40px;
+  }
+  .text p {
+    font-size: 15px;
+  }
+}
+
+#contact {
+  display: flex;
+  height: 50vh;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(8, 8, 54);
+}
+.con1 {
+  width: 550px;
+  color: white;
+}
+.con1 h1 {
+  font-size: 35px;
+}
+.con2 {
+  width: 400px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+input {
+  padding: 10px;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+}
+textarea {
+  padding: 10px;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+}
+.foot {
+  display: flex;
+  align-items: center;
+  color: white;
+  justify-content: space-around;
+  background-color: black;
+  padding: 5px;
+}
+.logo1 {
+  font-weight: 700;
+  font-size: 15px;
+  color: white;
+}
+#services {
+  min-height: 80vh;
+}
+.service-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+.service-rows {
+  background-color: aquamarine;
+  padding: 20px;
+  border-radius: 15px;
+}
+#services h1{
+  text-align: center;
+  font-size: 60px;
+  padding-top: 30px;
+  
+}
+.small{
+  text-align: center;
+  padding: 30px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .service-container {
+    grid-template-columns: 1fr;
+  }
+  #contact {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+  .con1 {
+    width: 100%;
+    font-size: 20px;
+    padding: 20px;
+  }
+  .con1 small {
+    font-size: 15px;
+  }
+  .con2 {
+    width: 100%;
+    padding: 20px 20px 40px;
+  }
+}
