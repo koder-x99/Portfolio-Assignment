@@ -9,7 +9,7 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 20px 80px;
-  background-color: aquamarine;
+  background-color: #000000;
   align-items: center;
   top: 0;
   z-index: 1000;
@@ -20,20 +20,21 @@ header {
   cursor: default;
   font-weight: 700;
   font-size: 30px;
-  color: black;
-  background-color: aquamarine;
+  color: white;
+  background-color: #000000;
 }
 .id {
   display: flex;
   gap: 20px;
   text-decoration: none;
-  color: rgb(7, 7, 56);
+  color: white;
   font-size: 20px;
-  background-color: aquamarine;
+  background-color: #000000;
 }
 .id a {
   text-decoration: none;
   font-weight: 600;
+  color: #007bff;
 }
 .id a:hover {
   text-decoration: underline;
@@ -59,8 +60,8 @@ header {
   width: 500px;
 }
 #hero img {
-  background-color: aquamarine;
-  padding: 30px 30px 50px;
+  background-color: #007bff;
+  padding: 20px 20px 40px;
   border-radius: 15px;
 }
 
@@ -86,7 +87,7 @@ button {
   header {
     padding: 20px;
   }
-  .logo{
+  .logo {
     font-size: 25px;
   }
   .hero-section {
@@ -95,7 +96,7 @@ button {
     align-content: center;
     justify-content: center;
   }
-  #hero img {
+  .hero-section img {
     width: 70%;
     height: auto;
     margin-bottom: 20px;
@@ -118,20 +119,21 @@ button {
 
 #contact {
   display: flex;
-  height: 50vh;
+  min-height: 60vh;
   align-items: center;
   justify-content: space-around;
   background-color: rgb(8, 8, 54);
+  padding: 30px;
 }
 .con1 {
-  width: 550px;
+  width: 400px;
   color: white;
 }
 .con1 h1 {
   font-size: 35px;
 }
 .con2 {
-  width: 400px;
+  width: 350px;
 }
 form {
   display: flex;
@@ -144,6 +146,12 @@ input {
   outline: none;
   border: none;
   font-size: 18px;
+}
+input[type="submit"] {
+  width: 50%;
+  padding: 5px;
+  align-items: center;
+  justify-content: centent;
 }
 textarea {
   padding: 10px;
@@ -160,6 +168,9 @@ textarea {
   background-color: black;
   padding: 5px;
 }
+.foot p {
+  font-size: 15px;
+}
 .logo1 {
   font-weight: 700;
   font-size: 15px;
@@ -167,6 +178,7 @@ textarea {
 }
 #services {
   min-height: 80vh;
+  color: white;
 }
 .service-container {
   display: grid;
@@ -175,26 +187,41 @@ textarea {
   padding: 20px;
 }
 .service-rows {
-  background-color: aquamarine;
+  background-color: #121212;
   padding: 20px;
   border-radius: 15px;
+  transition: transform 0.5s ease-in-out;
 }
-#services h1{
+.service-rows:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 10px 20px #b026ff;
+}
+#services h1 {
   text-align: center;
   font-size: 60px;
   padding-top: 30px;
-  
+  color: #000000;
 }
-.small{
+.small {
   text-align: center;
   padding: 30px;
   margin: auto;
   display: flex;
   justify-content: center;
+  color: #000000;
 }
 @media (max-width: 768px) {
   .service-container {
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 20px;
+  }
+  .service-rows {
+    width: 95%;
+  }
+  .service-rows p {
+    font-size: 10px;
   }
   #contact {
     display: grid;
@@ -212,5 +239,6 @@ textarea {
   .con2 {
     width: 100%;
     padding: 20px 20px 40px;
+    margin-bottom: 10px;
   }
 }
